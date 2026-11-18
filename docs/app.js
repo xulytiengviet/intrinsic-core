@@ -215,8 +215,8 @@ function drawState(){
   doorObj.position.z=-.74+1.22*s.door;
   clamps[0].position.z=-.44-lerp(.35,.19,s.vise);
   clamps[1].position.z=-.44+lerp(.35,.19,s.vise);
-  spindle.rotation.y+=s.spindle?.13:0;
-  spindle.position.y=1.37+(s.spindle?.12*Math.sin(performance.now()*.02):0);
+  spindle.rotation.y += s.spindle ? 0.13 : 0;
+  spindle.position.y = 1.37 + (s.spindle ? 0.12 * Math.sin(performance.now()*.02) : 0);
   spindleLight.intensity=s.spindle?2.0:0;
   visionBox.visible=$('showVision').checked&&s.vision>.05;
   visionRing.visible=visionBox.visible;
@@ -324,7 +324,7 @@ function init3D(){
   controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.085;
   controls.target.set(-.55,.88,.12);controls.minDistance=3.4;controls.maxDistance=17;
   controls.maxPolarAngle=Math.PI*.495;controls.minPolarAngle=.13;
-  buildRoom();makeTable;buildCNC();buildFeed();buildCameraRig();buildRobot();makeWorkpiece();
+  buildRoom();buildCNC();buildFeed();buildCameraRig();buildRobot();makeWorkpiece();
   function resize(){const w=view.clientWidth,h=view.clientHeight;if(w===0||h===0)return;renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,1.7));renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}
   resize();new ResizeObserver(resize).observe(view);window.addEventListener('resize',resize);
   view.addEventListener('webglcontextlost',(e)=>{e.preventDefault();playing=false;err.hidden=false;err.textContent='WebGL bị ngắt. Tải lại trang để khôi phục mô phỏng.';});
