@@ -1,4 +1,6 @@
 # Intrinsic Core
+
+> 🇻🇳 **Vietnamese community demo:** [OMTS CNC Robot 3D Simulator](docs/index.html) · [Vietnamese guide](docs/README.md) · [GitHub Pages (once enabled)](https://xulytiengviet.github.io/intrinsic-core/). This browser-only educational visualization is **not** an official Intrinsic deployment, Gazebo, or real robot controller.
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Documentation](https://img.shields.io/badge/Intrinsic%20developer%20community-Join%20us-blue.svg)](https://developer.intrinsic.ai)
 [![ROS2 Compatibility](https://img.shields.io/badge/ROS2_Compatible-brightgreen.svg)](https://www.ros.org/)
